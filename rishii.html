@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Digital Journal</title>
+    <style>
+        body {
+            font-family: 'Caveat', cursive;
+            background: #f5e9d9; /* Old paper color */
+            margin: 0;
+            padding: 20px;
+        }
+        .polaroid {
+            background: white;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: inline-block;
+            margin: 10px;
+        }
+        .sticky-note {
+            background: #fffc9e;
+            padding: 15px;
+            width: 150px;
+            transform: rotate(-2deg);
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            position: absolute;
+        }
+        .envelope {
+            cursor: pointer;
+            width: 100px;
+        }
+        .letter {
+            display: none;
+            background: white;
+            padding: 20px;
+            margin-top: 10px;
+            border: 1px dashed #ccc;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>📖 My Digital Journal</h1>
+
+    <!-- Polaroid Photo -->
+    <div class="polaroid">
+        <img src="your-photo.jpg" width="150">
+        <p>My Day at the Beach!</p>
+    </div>
+
+    <!-- Sticky Note -->
+    <div class="sticky-note" style="top: 100px; left: 200px;">
+        Buy milk! 🥛
+    </div>
+
+    <!-- Clickable Envelope -->
+    <div class="envelope" onclick="openLetter()">
+        <img src="envelope.png" width="100">
+        <div class="letter" id="letter">
+            <p>Dear Diary, today was amazing...</p>
+        </div>
+    </div>
+
+    <script>
+        function openLetter() {
+            document.getElementById("letter").style.display = "block";
+        }
+    </script>
+</body>
+</html>
